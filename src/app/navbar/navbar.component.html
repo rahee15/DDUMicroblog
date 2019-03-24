@@ -1,0 +1,49 @@
+
+ <!DOCTYPE html>
+ <html>
+    <head>
+       <title>The Materialize Grids Example</title>
+       <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link rel = "stylesheet"
+          href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+       <link rel = "stylesheet"
+          href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+       <script type = "text/javascript"
+          src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+       
+       </script>             
+    </head>
+    
+    <body>
+      
+          <nav class="white">
+                <div class="nav-wrapper">
+                     
+                    <ul class="hide-on-med-and-down left">               
+                      <li><a [routerLink]="['/home']" class="red-text">Home</a></li>
+                    </ul>
+                    
+                     <ul style="margin-left:30.7%;width:20%"> 
+                     <li>            
+                        <mat-form-field >
+                           <input [(ngModel)]="friend" matInput placeholder="Search a Friend!" class="red-text">
+                         </mat-form-field>
+                     </li>
+                     <li>    
+                        <span class="change" (click)="search()" style="text-anchor: start"> <mat-icon matSuffix class="red-text" >search</mat-icon></span>        
+                     
+                        </li> 
+                     </ul>  
+                    <ul class="hide-on-med-and-down right">                    
+                        <li><a [routerLink]="['/userProfile']" class="red-text">{{ name }}</a></li>
+                        <li><a [routerLink]="['/managefriends/']" class="red-text">Manage Friends </a></li>
+                        <li><a style="cursor: pointer;" (click)="logout()" class="red-text">Logout</a></li>
+                    </ul>
+                </div>
+              </nav> 
+              <br>
+              </body> 
+              </html>
+              

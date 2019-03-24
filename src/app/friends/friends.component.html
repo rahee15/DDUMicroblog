@@ -1,0 +1,34 @@
+
+<app-navbar></app-navbar>
+
+Current Friends
+<table style="margin:4%">
+<tr *ngFor="let ob1 of temp2 ">
+ <td> {{ob1.name | stripdoublequotes }}</td>
+ <td> <button #btn id="{{ ob1.name|stripdoublequotes }}"  (click)="managefriend(ob1.name)">Remove Friend</button></td>
+ 
+ <td></td>
+</tr>
+</table> 
+
+Friend Requests Recieved
+
+<table style="margin:4%">
+    <tr *ngFor="let ob1 of temp4 ">
+     <td> {{ob1.name | stripdoublequotes }}</td>
+     <td> <button #btn id="{{ ob1.name | stripdoublequotes }}"   (click)="managefriend(ob1.name)">Accept Friend Request</button></td>
+     
+     <td></td>
+    </tr>
+</table> 
+
+Friend Requests Sent
+
+<table style="margin:4%">
+    <tr *ngFor="let ob1 of temp6 ">
+     <td> {{ob1.name | stripdoublequotes }}</td>
+     <td> <button #btn id="{{ ob1.name |stripdoublequotes }}"  (click)="managefriend(ob1.name)">Friend Request Sent</button></td>
+     
+     <td></td>
+    </tr>
+</table> 

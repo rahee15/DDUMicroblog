@@ -1,0 +1,152 @@
+
+ <!DOCTYPE html>
+<html>
+   <head>
+      <title>The Materialize Grids Example</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      
+      </script>             
+   </head>
+   
+   <body>
+     
+            <app-navbar></app-navbar> 
+             <div >
+             <mat-sidenav-container class="example-container side" style="width:100%;margin-left: 2%;margin-right: 2%"   >
+              <mat-sidenav mode="side" opened style="width:25%">
+                  <mat-card class="example-card" style="width:90%;margin-left: 1%">
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Shiba Inu this is it</mat-card-title>
+                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                      </mat-card-header>
+                      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                      <mat-card-content>
+                        <p>
+                          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                          bred for hunting.
+                        </p>
+                      </mat-card-content>
+                      <mat-card-actions style="margin-top:5%">
+                          <button mat-button style="margin-left:35%">FOLLOW</button>
+                          
+                        </mat-card-actions>
+                    </mat-card>   
+                   
+              </mat-sidenav>
+             
+             
+             
+             
+             
+             
+             
+              <mat-sidenav-content >
+                  <mat-card class="example-card"  style="width:50%;height:10%;margin-left:5%;margin-right:5%;" >
+                        <b>Create Post</b>
+                        <br>
+                        <input #title type="text" placeholder="Enter Title  ">
+                        <br>
+                        <input #post type="text" placeholder="Whats on your mind,{{ name.firstName }} ? ">
+                        <br>
+                        <!-- <input type="file" name="photo" ng2FileSelect [uploader]="uploader" /> -->
+                        <input type="file" (change)="saveFile($event)" accept=".png,.jpg,.jpeg" />
+                      
+                      
+                      <mat-card-actions>
+                          <button [disabled]="loading" mat-button class="btn btn-success btn-s" (click)="upload(post.value,title.value)" >Post</button>
+                          <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                      </mat-card-actions>
+                      
+                        <!-- [disabled]="!uploader.getNotUploadedItems().length" -->
+                    </mat-card>
+                    <br>
+                    
+
+
+
+
+              <div *ngFor="let ob1 of temp2" style="width:50%;margin-left:5%;margin-right:5%;">
+                  <mat-card class="example-card"  >
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>
+                            {{ob1.name | stripdoublequotes }}
+                          </mat-card-title>
+                        <mat-card-subtitle>
+                            Heading   {{ob1.heading | stripdoublequotes }}
+                        </mat-card-subtitle>
+                      </mat-card-header>
+                      <img mat-card-image [src]="ob1.imageUrl | stripdoublequotes " alt="Posted Image">
+                      
+                      <mat-card-content>
+                          <p>
+                            Descripition
+                            {{ob1.summary | stripdoublequotes }}
+                          </p>
+                          <p>
+                          Likes {{ ob1.nooflikes }}
+                          </p>
+                      </mat-card-content>
+                      <mat-card-actions>
+                        <button [ngClass]="{'highlight' : ob1.likestatus | convertStringtoBool }" mat-button (click)="addLike(ob1)">LIKE</button>
+                        <!-- <button mat-button >{{ob1.likestatus}}</button> -->
+                       <br> 
+                       <br>
+                        Comment ??
+                        <textarea id="txt{{ob1.id}}" placeholder="Add Comment"></textarea>
+                      </mat-card-actions>
+                      {{ ob1.id }}
+                      <button type="button" (click)="addComment(ob1.id)">Add Comment</button>
+
+                      <button type="button" (click)="toggleChild(ob1.id)">View Comment</button>
+                      
+                      <div>
+                        
+                          <div *ngIf="showVar" >
+                              <p>hello </p>
+                       <!--    <div *ngFor="let ob2 of temp4">
+                              <mat-card class="example-card">
+                                  <mat-card-header>
+                                      {{ ob2.name }}
+                                  </mat-card-header>
+                                  <mat-card-content>
+                                    <p>
+                                        {{ ob2.comment }}
+                                    </p>
+                                  </mat-card-content>
+                              </mat-card>
+                          </div>
+                          -->
+                        </div>
+                    
+                      </div>
+
+                    </mat-card>
+                    <br>
+                    <br>
+              </div>
+                
+                
+                
+                
+                
+                
+                
+                
+               
+              
+              </mat-sidenav-content>
+            </mat-sidenav-container>
+             </div>
+   </body>
+</html> 
