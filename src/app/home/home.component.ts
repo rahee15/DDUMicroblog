@@ -95,13 +95,16 @@ export class HomeComponent implements OnInit {
     });
   }
   fileName;
+  tempid;
   saveFile(event)
   {
     this.fileName=event.target.files[0];
   }
   toggleChild(id:number){
-    this.temp6
+    this.temp6=[];
+    console.log("id is "+id);
     this.showVar = !this.showVar;
+    this.tempid=id;
     this.TrialService.getComments(id).subscribe(data=>{
       if(data)
         {
@@ -111,7 +114,8 @@ export class HomeComponent implements OnInit {
             let value1=data[i].toString();
             let value2=JSON.parse(value1);  
             this.temp6.push(value2);
-            console.log("name is "+value2.imageUrl);
+
+            console.log("name is "+value2.ima);
           }
          // console.log("this is trial2 "+(data+" hello "));
           //console.log("this is trial3 "+JSON.parse(this.temp1.toString()));

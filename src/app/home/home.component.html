@@ -94,15 +94,15 @@
                       
                       <div>
                         
-                          <div *ngIf="showVar" >
+                          <div *ngIf="showVar && ob1.id==tempid" >
                             
-                           <div *ngFor="let ob2 of temp6">
+                           <div *ngFor="let ob2 of temp6" >
                               <mat-card class="example-card">
-                                  <mat-card-header>
+                                  <mat-card-header >
                                      <b> {{ ob2.name | stripdoublequotes }} </b>
                                   </mat-card-header>
                                   <mat-card-content>
-                                    <p>
+                                    <p >
                                         {{ ob2.comment | stripdoublequotes }}
                                     </p>
                                   </mat-card-content>
