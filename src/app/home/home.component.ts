@@ -115,7 +115,7 @@ export class HomeComponent implements OnInit {
             let value2=JSON.parse(value1);  
             this.temp6.push(value2);
 
-            console.log("name is "+value2.ima);
+            console.log("name is "+value2.comment);
           }
          // console.log("this is trial2 "+(data+" hello "));
           //console.log("this is trial3 "+JSON.parse(this.temp1.toString()));
