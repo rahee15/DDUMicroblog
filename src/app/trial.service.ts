@@ -29,7 +29,7 @@ export class TrialService {
   // private _getFriendRequest="https://ddumicro.herokuapp.com/rest/node/getFriendRequest";
   private _getFriendRequest="https://ddumicro.herokuapp.com/rest/node/getFriendRequest";
   private _getFriendRequestsSent="https://ddumicro.herokuapp.com/rest/node/getFriendRequestsSent";
-  private _getComments="http://192.168.43.:8080/SocialNetworking/rest/node/viewComment";
+  private _getComments="https://ddumicro.herokuapp.com/rest/node/viewComment";
   private _addComment="https://ddumicro.herokuapp.com/rest/node/addComment";
   //private _viewComment="https://ddumicro.herokuapp.com/rest/node/viewComment";
   private _viewComment="http://192.168.43.84:8080/SocialNetworking/rest/node/viewComment";

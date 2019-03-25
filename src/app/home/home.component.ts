@@ -100,6 +100,7 @@ export class HomeComponent implements OnInit {
     this.fileName=event.target.files[0];
   }
   toggleChild(id:number){
+    this.temp6
     this.showVar = !this.showVar;
     this.TrialService.getComments(id).subscribe(data=>{
       if(data)
@@ -115,6 +116,7 @@ export class HomeComponent implements OnInit {
          // console.log("this is trial2 "+(data+" hello "));
           //console.log("this is trial3 "+JSON.parse(this.temp1.toString()));
         }
+        
  
     })
 }

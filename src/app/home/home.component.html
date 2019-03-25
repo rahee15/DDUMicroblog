@@ -95,15 +95,15 @@
                       <div>
                         
                           <div *ngIf="showVar" >
-                              <p>hello </p>
+                            
                            <div *ngFor="let ob2 of temp6">
                               <mat-card class="example-card">
                                   <mat-card-header>
-                                      {{ ob2.name }}
+                                     <b> {{ ob2.name | stripdoublequotes }} </b>
                                   </mat-card-header>
                                   <mat-card-content>
                                     <p>
-                                        {{ ob2.comment }}
+                                        {{ ob2.comment | stripdoublequotes }}
                                     </p>
                                   </mat-card-content>
                               </mat-card>
