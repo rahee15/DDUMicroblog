@@ -16,8 +16,8 @@ export class TrialService {
   //  private _deletePost="http://192.168.43.155:8080/SocialNetworking/rest/node/deletePost";
   private _getFriend="https://ddumicro.herokuapp.com/rest/node/viewAllFriends";
   private _searchFriend="https://ddumicro.herokuapp.com/rest/node/search";
-//  private _getPostFriend="https://ddumicro.herokuapp.com/rest/node/searchFriendPost";
- private _getPostFriend="http://192.168.43.155:8080/SocialNetworking/rest/node/searchFriendPost";
+  private _getPostFriend="https://ddumicro.herokuapp.com/rest/node/searchFriendPost";
+ //private _getPostFriend="http://192.168.43.155:8080/SocialNetworking/rest/node/searchFriendPost";
   private _addLike="https://ddumicro.herokuapp.com/rest/node/addLike";
   private _removeLike="https://ddumicro.herokuapp.com/rest/node/removeLike";
   private _createPost="https://ddumicro.herokuapp.com/rest/node/createPost";
@@ -30,7 +30,7 @@ export class TrialService {
   private _getFriendRequest="https://ddumicro.herokuapp.com/rest/node/getFriendRequest";
   private _getFriendRequestsSent="https://ddumicro.herokuapp.com/rest/node/getFriendRequestsSent";
   private _getComments="https://ddumicro.herokuapp.com/rest/node/getComments";
-  private _addComment="http://172.20.10.14:8080/SocialNetworking/rest/node/addComment";
+  private _addComment="https://ddumicro.herokuapp.com/rest/node/addComment";
   constructor(private _http:HttpClient) { }
   getData(uname:string)
   {
