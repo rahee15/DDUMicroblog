@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
       this.route.navigate(['/login']);
       return;
     }
-  
+   
    // this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
 
     //this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
@@ -73,6 +73,26 @@ export class HomeComponent implements OnInit {
         }
  
     })  
+  }
+  viewComment(id:number)
+  {
+
+    this.TrialService.viewComments(id).subscribe(data=>{
+     if(data)
+        {
+          this.temp3=data;
+          for(var i in data)
+          {
+            let value1=data[i].toString();
+            let value2=JSON.parse(value1);
+            
+            this.temp4.push(value2);
+            console.log("name is "+value2.imageUrl);
+          }
+         // console.log("this is trial2 "+(data+" hello "));
+          //console.log("this is trial3 "+JSON.parse(this.temp1.toString()));
+        }
+    });
   }
   fileName;
   saveFile(event)
@@ -229,7 +249,7 @@ export class HomeComponent implements OnInit {
           }
          //console.log("this is trial3 "+JSON.parse(this.temp1.toString()));
         }
- 
+      alert("Comment added succesfully");
     })
   }
 

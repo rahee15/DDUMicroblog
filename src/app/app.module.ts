@@ -58,7 +58,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    routing[,
+    routing,
     MatCardModule,
     MatSidenavModule,
     MatInputModule,

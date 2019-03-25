@@ -87,7 +87,7 @@
                         Comment ??
                         <textarea id="txt{{ob1.id}}" placeholder="Add Comment"></textarea>
                       </mat-card-actions>
-                      {{ ob1.id }}
+                    
                       <button type="button" (click)="addComment(ob1.id)">Add Comment</button>
 
                       <button type="button" (click)="toggleChild(ob1.id)">View Comment</button>
@@ -96,7 +96,7 @@
                         
                           <div *ngIf="showVar" >
                               <p>hello </p>
-                       <!--    <div *ngFor="let ob2 of temp4">
+                           <div *ngFor="let ob2 of temp6">
                               <mat-card class="example-card">
                                   <mat-card-header>
                                       {{ ob2.name }}
@@ -108,7 +108,7 @@
                                   </mat-card-content>
                               </mat-card>
                           </div>
-                          -->
+                          
                         </div>
                     
                       </div>
