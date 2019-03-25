@@ -64,7 +64,10 @@ export class LoginComponent implements OnInit {
             }
             else
             {
+
                 console.log("Incorrect");
+                alert("Incorrect Credential")
+                this.loading=false;
             }
          
                 });
