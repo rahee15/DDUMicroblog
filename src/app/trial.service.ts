@@ -5,8 +5,9 @@ import { JSONP_ERR_WRONG_RESPONSE_TYPE } from '@angular/common/http/src/jsonp';
 @Injectable({
   providedIn: 'root'
 })
-export class TrialService {
+export class TrialService { 
 
+  private _findRelation="https://ddumicro.herokuapp.com/rest/node/findRelation";
    private _getData="https://ddumicro.herokuapp.com/rest/node/add";
   private _getPost="https://ddumicro.herokuapp.com/rest/node/viewAllPost";
   private _userProfile="https://ddumicro.herokuapp.com/rest/node/userProfile";
@@ -266,5 +267,15 @@ export class TrialService {
     }
     console.log("param 2 is "+param2);
     return this._http.post<any>(this._addComment,param2);
+  }
+  findRelation(friendname,username)
+  {
+    var param2={
+      name1:friendname,
+      name2:username
+      
+    }
+    console.log("param 2 is "+param2);
+    return this._http.post<any>(this._findRelation,param2);
   }
 }

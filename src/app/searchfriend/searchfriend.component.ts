@@ -38,6 +38,10 @@ export class SearchfriendComponent implements OnInit {
     console.log("search friend component is called"); 
     console.log("parameter is "+this.firstParam.toString());
     this.value3=this.firstParam.toString();
+    
+    
+  
+    
     this.TrialService.getPostFriend(this.firstParam,JSON.parse(sessionStorage.getItem('current')).username).subscribe(data=>{
       if(data)
         {
@@ -54,8 +58,14 @@ export class SearchfriendComponent implements OnInit {
          // console.log("this is trial2 "+(data+" hello "));
           //console.log("this is trial3 "+JSON.parse(this.temp1.toString()));
         }
+        else
+        {
+            
+        }
+    
 
      })
+   
     
   
     })
